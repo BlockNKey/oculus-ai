@@ -1,0 +1,347 @@
+
+
+
+.products-container {
+    --black: #0a0a11;
+    --white: #fff;
+    --medium-slate-blue: #837dff;
+    --dim-grey: #535357;
+    --silver: #bdbdbd;
+    --deep-sky-blue: #2da6dc;
+    --grey: #828282;
+    --light-green: #8adf5c;
+    /* max-width: 1540px; */
+    padding-right: 50px;
+    padding-left: 50px;
+    max-width: 100%;
+    height: calc( var(--circle-radius) / 2 );
+}
+
+.team-carousel::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    bottom: 0;
+    width: calc(var(--circle-radius)* 2);
+    height: calc(var(--circle-radius-y)* 2);
+    margin: auto;
+    border: 1px dashed var(--white, #FFF);
+    top: calc(100% + 100px);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.products-carousel .quote-img {
+    width: 280px;
+    height: 280px;
+    opacity: 0.5;
+}
+.products-carousel .tfc-qoute-item.active .quote-img {
+    width: 500px;
+    height: 500px;
+    max-width: none;
+    opacity: 1;
+}
+@media screen and (max-width: 767.98px) {
+    .products-container {
+        height: calc( var(--circle-radius) / 1 );
+    }
+    .products-carousel .tfc-qoute-item.active .quote-img {
+        width: 300px;
+        height: 300px;
+        max-width: 100vw;
+    }
+    
+}
+
+.club-carousel-wrap {
+    width: 100%;
+    max-width: calc( var(--circle-radius) * 2 );
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    /* position: relative; */
+}
+
+.quote-img {
+    object-fit: scale-down;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: height .2s,width .2s;
+    margin: auto auto 0
+}
+
+.team-carousel {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    padding: calc(var(--circle-radius) / 2) 0 0;
+}
+
+.products-carousel .quote-prev,
+.products-carousel .quote-next {
+    transition: all .2s;
+    width: 60px;
+    height: 60px;
+}
+
+.products-carousel .quote-prev:hover,
+.products-carousel .quote-next:hover {
+    transform: scale(1.1);
+}
+
+
+.products-carousel .quote-next,
+.products-carousel .quote-prev {
+    position: absolute;
+    top: 200px;
+    margin: auto;
+}
+.products-carousel .quote-next {
+    right: 25vw;
+}
+.products-carousel .quote-prev {
+    left: 25vw;
+}
+@media screen and (max-width: 767.98px) {
+    .team-carousel {
+        padding: 0 0 30px;
+        margin: 0 0 0;
+    }
+    .products-carousel .quote-next {
+        right: 30px;
+        width: 30px;
+        height: 30px;
+    }
+    .products-carousel .quote-prev {
+        left: 30px;
+        width: 30px;
+        height: 30px;
+    }
+}
+.products-carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto 90px;
+    padding: calc(var(--circle-radius) / 1.125) 0 150px;
+}
+
+@media screen and (max-width: 767.98px) {
+    .products-carousel {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+.tfc-qoute-item.active .quote-logo-pill {
+    opacity: 1;
+}
+
+.quotes-logo {
+    object-fit: cover;
+    max-height: 100%
+}
+
+.quote-item-inner {
+    position: relative
+}
+
+.svg-embed {
+    z-index: -1;
+    position: absolute;
+    inset: 0
+}
+
+.carousel-overflow {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    /* overflow: hidden */
+}
+
+/* .asdasd { */
+.club-carousel-cont,.quote-list-wrap {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    inset: 0%;
+    z-index: 1;
+}
+
+.quote-prev {
+    width: 40px;
+    height: 40px;
+    padding: 0
+}
+
+.quote-next {
+    width: 40px;
+    height: 40px;
+    padding: 0
+}
+
+.quote-arrows {
+    grid-column-gap: 16px;
+    justify-content: center;
+    width: 300px;
+    height: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 20px;
+    /* position: absolute; */
+    /* inset: auto 0% 20px; */
+    z-index: 10;
+    transition: all .2s;
+}
+
+.pill-logo {
+    max-height: 100%
+}
+
+.cms-desc {
+    z-index: 0;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    opacity: 0;
+    color: #fff;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 500px;
+}
+
+.team-carousel .cms-desc {
+    top: 480px;
+}
+
+.team-carousel .tfc-qoute-item {
+    top: calc( var(--circle-radius) * 1.35 );
+}
+
+@media screen and (max-width: 767.98px) {
+}
+
+.quote-name {
+
+    font-weight: 500
+}
+
+.quote-rtx {
+
+    font-size: 20px;
+}
+
+.quote-rtx p {
+
+}
+
+.tfc-qoute-item {
+    cursor: pointer;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 1;
+    transform: scale(0.8);
+}
+
+.tfc-qoute-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 123;
+    transition: opacity .4s;
+}
+.tfc-qoute-item.active::before {
+    opacity: 0;
+}
+
+.tfc-qoute-item.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.products-carousel .tfc-qoute-list {
+    transform: translateY(200px);
+}
+
+.tfc-quote-item-child {
+    position: relative
+}
+
+.tfc-carousel-txt-list {
+    width: 100%;
+}
+
+.tfc-carousel-txt-list-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    right: 0%;
+    z-index: 20;
+}
+
+.quote-dots {
+    opacity: 0;
+    max-width: 240%
+}
+
+.quote-dots-wrap {
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    inset: 0%
+}
+
+.team-carousel .quote-img{
+    width: 200px;
+    max-width: 100vw;
+    height: 200px;
+}
+
+.team-carousel .quote-logo-pill {
+    font-size: 20px;
+    padding: 4px 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@media screen and (max-width: 767.98px) {
+    .quote-img {
+        width: 200px;
+        height: 200px;
+    }
+}
