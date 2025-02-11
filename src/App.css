@@ -76,3 +76,15 @@ body {
     transform: translate3d(var(--end-x), var(--end-y), 0);
   }
 }
+
+.component-wrapper {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 900px) {
+  .component-wrapper {
+    max-width: 80rem;
+  }
+}

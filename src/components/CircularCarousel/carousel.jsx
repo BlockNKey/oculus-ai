@@ -9,6 +9,7 @@ gsap.registerPlugin(useGSAP); // register the hook to avoid React version discre
 gsap.registerPlugin(Draggable);
 
 export default function CircularCarousel({
+  id,
   items = [],
   className = "",
   radiusX = 600,
@@ -90,6 +91,7 @@ export default function CircularCarousel({
 
   return (
     <section
+      id={id}
       style={{ "--circle-radius": radiusX + "px", "--circle-radius-y": radiusY + "px" }}
       className={
         className +

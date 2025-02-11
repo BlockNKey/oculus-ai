@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import logoIconImg from "../images/bw-eye.png";
 import logoLetterImg from "../images/oculus-text.png";
 
+const navbarItems = ["glimpse", "aperture", "god's eye", "tiers", "third eye", "community"];
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -38,7 +40,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-4 md:px-12 xl:px-36 py-4 flex items-center justify-between md:justify-between md:gap-10">
+      <div className="component-wrapper p-4 flex items-center justify-between md:justify-between md:gap-10">
         <div
           className={`flex items-center text-xl font-bold text-[#0F2E2F] transition-transform duration-300 md:text-2xl ${
             hasScrolled ? "scale-120" : "scale-100"
@@ -61,17 +63,11 @@ const Navbar = () => {
         </button>
 
         <div className="hidden items-center space-x-2 md:flex lg:space-x-8">
-          {[
-            "Vision",
-            "Aperture",
-            // "God's Eye",
-            // "Oculus AI",
-            "Tiers"
-          ].map((section) => (
+          {navbarItems.map((section) => (
             <a
               onClick={() => scrollToSection(section)}
               key={section}
-              className="font-bold text-gray-200 hover:text-gray-900 transition-all duration-300 cursor-pointer"
+              className="font-bold text-gray-200 hover:text-gray-900 transition-all duration-300 cursor-pointer capitalize"
             >
               {section}
               {activeSection === section && (
@@ -84,20 +80,11 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="absolute left-0 right-0 top-full border-t bg-[#050309]/95 backdrop-blur-sm md:hidden">
             <div className="flex flex-col space-y-6 p-6">
-              {[
-                "Vision",
-                "Aperture",
-                // "God's Eye",
-                // "Mr. Oculus",
-                "Tires",
-                "Community",
-                "Roadmap",
-                "Socials",
-              ].map((section) => (
+              {navbarItems.map((section) => (
                 <a
                   onClick={() => scrollToSection(section)}
                   key={section}
-                  className="font-bold text-white hover:text-gray-300 transition-all duration-300 text-xl"
+                  className="font-bold text-white hover:text-gray-300 transition-all duration-300 text-xl capitalize"
                 >
                   {section}
                   {activeSection === section && (

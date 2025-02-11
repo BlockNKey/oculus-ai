@@ -6,7 +6,7 @@ import { useMediaQuery } from "@uidotdev/usehooks";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-const ProductCarousel = ({ content }) => {
+const ProductCarousel = ({ id, content }) => {
   const containerRef = useRef(null);
   const contentRef = useRef(null);
   const sectionRefs = useRef([]);
@@ -62,13 +62,13 @@ const ProductCarousel = ({ content }) => {
   }
 
   return (
-    <section ref={containerRef} className="relative flex flex-row items-start justify-between w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-52">
+    <section id={id} ref={containerRef} className="relative flex flex-row items-start justify-between w-full px-4 component-wrapper">
       <div ref={contentRef} className="w-1/2 flex flex-col gap-5">
         {content.map((item, index) => (
           <div
             key={index}
             ref={(el) => (sectionRefs.current[index] = el)}
-            className="w-full min-h-screen flex items-center text-lg p-5 text-white flex-col justify-center gap-5"
+            className="w-full min-h-screen flex text-lg py-5 text-white flex-col justify-center gap-10"
           >
             <div className="bg-gradient-to-r from-[#917efe] to-white text-transparent bg-clip-text text-5xl">{item.name}</div>
             {item.desc}
@@ -83,7 +83,7 @@ const ProductCarousel = ({ content }) => {
               key={index}
               ref={(el) => (imageRefs.current[index] = el)}
               src={item.img}
-              className="w-full max-w-[400px] h-4/5 object-contain absolute top-1/10 left-0"
+              className="w-full h-4/5 object-contain absolute top-1/10 left-0 transition-all duration-300"
               alt={item.name}
               style={{ opacity: index === currentIdx ? 1 : 0 }}
             />) : (<video
@@ -92,7 +92,7 @@ const ProductCarousel = ({ content }) => {
               autoPlay
               loop
               muted
-              className="w-full max-w-[400px] h-4/5 object-cover absolute top-1/10 left-0"
+              className="w-full h-4/5 object-cover absolute top-1/10 left-0 transition-all duration-300"
             >
               <source src={item.video} type="video/mp4" />
             </video>)

@@ -57,7 +57,7 @@ const stats = [
 
 const Tokenomics = () => (
   <section id="Tokenomics" className="py-12 lg:py-24 relative">
-    <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-52 flex flex-col gap-5 lg:gap-10">
+    <div className="w-full px-4 component-wrapper flex flex-col gap-5 lg:gap-10">
       <div className="bg-clip-text text-transparent bg-gradient-to-l from-[#917efe] to-white text-center text-[18px] lg:text-[52px] mb-6 lg:mb-14">Tokenomics</div>
       <div className="flex flex-row justify-center">
         {stats.map((stat, index) => (

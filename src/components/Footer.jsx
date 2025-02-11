@@ -30,19 +30,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-gray-400 py-8 md:py-12 relative">
-      <div className="absolute translate-x-[-50%] w-[200%] left-[50%]">
-        <div className="absolute z-[-1] top-[-15vw] w-full">
-          <img loading="lazy" alt="OCULUS AI" src="/footer-bg-blur.svg" className="w-full" />
-        </div>
-        <img loading="lazy" alt="OCULUS AI" src="/footer-bg.svg" className="w-full" />
-      </div>
+    <footer className="text-gray-400 pb-8 md:pb-12 relative bg-[#131317] shadow-[0px_-10px_40px_rgba(255,255,255,0.6)] border-t-2 border-white">
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="max-w-6xl mx-auto px-4 md:px-6 z-[1] relative pt-[100px] md:pt-[200px]"
+        className="max-w-6xl mx-auto px-4 md:px-6 z-[1] relative pt-[50px] md:pt-[100px]"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           <motion.div variants={item} className="space-y-4 md:space-y-6">

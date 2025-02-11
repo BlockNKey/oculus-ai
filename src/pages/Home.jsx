@@ -26,66 +26,66 @@ const Home = () => {
       <Navbar />
       <Hero />
 
-      <ProductCarousel content={[
+      <ProductCarousel id="glimpse" content={[
         {
           sno: 0,
           name: "Glimpse",
           desc: "Glimpse is a lightweight yet robust monitoring bot designed to track market movements with precision.",
-          img: "/glimpse.png",
+          img: "/pic1.jpg",
         },
         {
           sno: 0,
           name: "Glimpse",
           desc: "It continuously scans price fluctuations, volume shifts, and key indicators across multiple exchanges, providing real-time alerts on potential trading opportunities. Equipped with customizable triggers for volatility spikes, trend reversals, and whale movements, it empowers traders with actionable insights.",
-          img: "/glimpse.png",
+          img: "/pic2.jpg",
         },
         {
           sno: 0,
           name: "Glimpse",
           desc: "Built for speed and efficiency, Glimpse operates with minimal latency, ensuring users stay ahead of market shifts without unnecessary complexity.",
-          img: "/glimpse.png",
+          img: "/pic3.jpg",
         },
       ]} />
 
-      <ProductCarousel content={[
+      <ProductCarousel id="aperture" content={[
         {
           sno: 1,
           name: "Aperture",
           desc: "Building on the solid foundation of Glimpse, Aperture takes market monitoring to the next level. It enhances real-time tracking with AI-powered analytics, predictive modeling, and on-chain data insights, allowing traders to anticipate trends and react faster. ",
-          img: "/aperture.png",
+          img: "/pic1.jpg",
         },
         {
           sno: 1,
           name: "Aperture",
           desc: "Designed for professionals, it offers customizable automation, API trading integration, and advanced risk management tools, ensuring seamless execution and maximum efficiency.",
-          img: "/aperture.png",
+          img: "/pic2.jpg",
         },
         {
           sno: 1,
           name: "Aperture",
           desc: "With features like whale movement detection, arbitrage tracking, and sentiment analysis, Aperture transforms data into actionable intelligence—giving you a decisive edge in the crypto market.",
-          img: "/aperture.png",
+          img: "/pic3.jpg",
         },
       ]} />
 
-      <ProductCarousel content={[
+      <ProductCarousel id="god's eye" content={[
         {
           sno: 2,
           name: "God's Eye",
           desc: "Evolving beyond Aperture, God's Eye is the apex of market monitoring—an omniscient, fully customizable intelligence system designed for elite traders, institutions, and algorithmic strategists.",
-          img: "/goldeneye.png",
+          img: "/pic1.jpg",
         },
         {
           sno: 2,
           name: "God's Eye",
           desc: "It grants unparalleled control, allowing users to design, automate, and optimize bespoke trading strategies with deep-learning AI, advanced quant models, and real-time on-chain forensics. With God’s eye market surveillance, it cross-analyzes price action, whale activity, liquidity flows, and sentiment across all major exchanges, Layer 1s, Layer 2s, and DeFi ecosystems.",
-          img: "/goldeneye.png",
+          img: "/pic2.jpg",
         },
         {
           sno: 2,
           name: "God's Eye",
           desc: "Custom scripting, API-level integrations, and AI-enhanced alerts adapt to your unique trading style, providing a zero-latency edge in even the most volatile conditions. God's Eye isn’t just a tool—it’s an unstoppable force that sees everything, predicts faster, and executes smarter.",
-          img: "/goldeneye.png",
+          img: "/pic3.jpg",
         },
       ]} />
 
@@ -99,8 +99,8 @@ const Home = () => {
       <StackedCards2 /> */}
       {/* <Features /> */}
       {/* <Pricing /> */}
-      <Tires />
-      <ProductCarousel content={[
+      <Tires id="tiers" />
+      <ProductCarousel id="third eye" content={[
         {
           sno: 0,
           name: "Third Eye",
@@ -130,7 +130,7 @@ const Home = () => {
       ]} />
       {/*<Aperture />*/}
       <Tokenomics />
-      <CircularCarousel
+      <CircularCarousel id="community"
         className="team-carousel"
         radiusX={760}
         radiusY={500}

@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <section
       id="Vision"
-      className="relative min-h-screen flex flex-col items-center overflow-hidden px-4 sm:px-0 justify-center"
+      className="relative component-wrapper min-h-screen flex flex-col items-center overflow-hidden px-4 sm:px-0 justify-center"
     >
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -34,7 +34,7 @@ const Hero = () => {
         />
       </motion.div>
 
-      <div className="relative z-10 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-52 flex flex-col md:flex-row items-center justify-between  gap-12 lg:gap-4 xl:gap-12">
+      <div className="relative z-10 px-4 flex flex-col md:flex-row items-center justify-between  gap-12 lg:gap-4 xl:gap-12">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}

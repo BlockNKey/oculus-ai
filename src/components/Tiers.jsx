@@ -1,10 +1,6 @@
 import { motion } from "framer-motion";
-import { GoCheckCircle } from "react-icons/go";
-import { RiCloseCircleLine } from "react-icons/ri";
 import { IoStar } from "react-icons/io5";
 import { Fragment, useEffect, useRef } from "react";
-import ethereumIcon from "../images/ethereum.png";
-
 
 const ethereumData = [
   { label: "Verified", isDev: true, value: [1, 1, 1] },
@@ -38,7 +34,7 @@ const allData = [
   { label: "Simulate Sells", isDev: false, value: [0, 0, 0] },
 ];
 
-export default function Tiers() {
+export default function Tiers({ id }) {
   const glimpseRef = useRef(null);
   const apertureRef = useRef(null);
 
@@ -70,8 +66,8 @@ export default function Tiers() {
   }, [apertureRef.current]);
 
   return (
-    <section id="Tires" className="py-48 text-white">
-      <div className="w-full px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-52">
+    <section id={id} className="py-48 text-white">
+      <div className="w-full px-4 component-wrapper">
         <div className="relative flex flex-col gap-8">
           <div className="px-4 lg:px-20 pt-10 md:pt-8 pb-8 border border-[#e5e7eb] tiers-gradient rounded-xl gap-x-9 gap-y-5 grid grid-cols-5">
             <div className="col-span-2" />
@@ -193,14 +189,6 @@ export default function Tiers() {
               </div>
               <span>Advanced-0.01% of Tokens(1000 SPECTRE tokens)</span>
             </motion.div>
-            {/* <motion.div
-      variants={item} className="bg-neutral-950 border border-gray-900 p-4 rounded-lg flex flex-col items-start gap-4">
-              <div className="flex items-center gap-2">
-                <IoStar className="text-green-500 text-2xl" />
-                <span className="text-xl">*Tire4</span>
-              </div>
-              <span>Premium-0.07% of Tokens(7000 PECTRE tokens)</span>
-            </div> */}
           </motion.div>
         </div>
       </div>
