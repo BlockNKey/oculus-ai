@@ -34,8 +34,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 w-full transition-all duration-300 ease-in-out z-50 ${
         hasScrolled
-          ? "bg-[#050309] shadow-lg py-2 backdrop-blur-sm"
-          : "bg-[#050309]"
+          ? "bg-[#13131780] shadow-lg py-2 backdrop-blur-sm"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-4 md:px-12 xl:px-36 py-4 flex items-center justify-between md:justify-between md:gap-10">

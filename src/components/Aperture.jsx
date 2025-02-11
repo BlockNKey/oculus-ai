@@ -1,8 +1,6 @@
 import { useRef, useEffect } from "react";
-import { motion, px } from "framer-motion";
+import { motion } from "framer-motion";
 import ApertureCard from "./common/ApertureCard";
-import eyeIcon from "../images/eye2.png";
-import goldeneyeIcon from "../images/goldeneye2.png";
 import mroIcon from "../images/mro2.png";
 import thirdeyeIcon from "../images/thirdeye.png";
 import video from "/teaser.mp4";
@@ -45,18 +43,11 @@ export default function Aperture() {
   };
 
   useEffect(() => {
-    if (!eyeIconRef.current || !eyeVideoRef.current || !mroIconRef.current || !mroVideoRef.current) return;
-    const observer = new ResizeObserver(() => {
-      const size = (window.innerHeight - eyeIconRef.current.clientHeight) / 2;
-      eyeIconRef.current.style.top = `${size}px`;
-      eyeVideoRef.current.style.top = `calc(50% - ${eyeVideoRef.current.clientHeight / 2}px`;
-      mroIconRef.current.style.top = `calc(50% - ${mroIconRef.current.clientHeight / 2}px`;
-      mroVideoRef.current.style.top = `calc(50% - ${mroVideoRef.current.clientHeight/2}px`;
-    });
+    const handleScroll = () => {
+    };
 
-    observer.observe(eyeIconRef.current);
-
-    return () => observer.disconnect();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -68,49 +59,44 @@ export default function Aperture() {
           </span>
         </div>
         <div className="grid grid-cols-3 gap-12 lg:gap-4 xl:gap-12">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="flex flex-col gap-4 xl:gap-8 items-center"
+          >
+            <ApertureCard data={ethereumData} />
+            <ApertureCard data={solanaData} />
+          </motion.div>
+
           {/* Eye Section */}
           <motion.div
             variants={container}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="relative"
+            className="flex flex-col col-span-2 md:flex-row justify-center items-center"
           >
-            <img
-              ref={eyeIconRef}
-              src={thirdeyeIcon}
-              alt="Eye Icon"
-              className="w-full h-auto md:w-full z-[9] sticky"
-            />
-          </motion.div>
-
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="flex flex-col flex-1 gap-4 xl:gap-8 items-center"
-          >
-            <ApertureCard data={ethereumData} />
-            <ApertureCard data={solanaData} />
-          </motion.div>
-
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="flex flex-col flex-1 gap-4 xl:gap-8 items-center"
-          >
-            <video
-              ref={eyeVideoRef}
-              controls
-              loop
-              muted
-              className="w-full h-auto sticky"
-            >
-              <source src={video} type="video/mp4" />
-            </video>
+            <div className="w-full">
+              <img
+                ref={eyeIconRef}
+                src={thirdeyeIcon}
+                alt="Eye Icon"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="w-full">
+              <video
+                ref={eyeVideoRef}
+                controls
+                loop
+                muted
+                className="w-full h-auto"
+              >
+                <source src={video} type="video/mp4" />
+              </video>
+            </div>
           </motion.div>
         </div>
       </div>

@@ -18,10 +18,7 @@ export default function CircularCarousel({
   const [carousel, setCarousel] = useState();
   const mainCarouselWrapRef = useRef(null);
 
-  let data = items;
-  if (variant === "team") {
-    data = [...items, ...items];
-  }
+  let data = [...items, ...items];
 
   const cmsDescRef = [...data.map((_, index) => useRef(null))];
   const itemsRef = [...data.map((_, index) => useRef(null))];
@@ -133,22 +130,18 @@ export default function CircularCarousel({
             ))}
           </div>
           <div className="">
-            {variant !== "team" && (
-              <>
-                <button
-                  onClick={() => carousel.previous({ duration: 1 })}
-                  className="w-button quote-prev"
-                >
-                  <img src="/arrow-left.svg" loading="lazy" alt="" />
-                </button>
-                <button
-                  onClick={() => carousel.next({ duration: 1 })}
-                  className="w-button quote-next"
-                >
-                  <img src="/arrow-right.svg" loading="lazy" alt="" />
-                </button>
-              </>
-            )}
+            <button
+              onClick={() => carousel.previous({ duration: 1 })}
+              className="w-button quote-prev"
+            >
+              <img src="/arrow-left.svg" loading="lazy" alt="" />
+            </button>
+            <button
+              onClick={() => carousel.next({ duration: 1 })}
+              className="w-button quote-next"
+            >
+              <img src="/arrow-right.svg" loading="lazy" alt="" />
+            </button>
             {data.map((item, index) => (
               <div
                 key={`circle-2-${index}`}
@@ -166,24 +159,6 @@ export default function CircularCarousel({
                   className="quote-rtx w-richtext"
                   dangerouslySetInnerHTML={{ __html: item.desc }}
                 ></div>
-                <div className="quote-arrows">
-                  {variant === "team" && (
-                    <>
-                      <button
-                        onClick={() => carousel.previous({ duration: 1 })}
-                        className="w-button quote-prev"
-                      >
-                        <img src="/arrow-left.svg" loading="lazy" alt="" />
-                      </button>
-                      <button
-                        onClick={() => carousel.next({ duration: 1 })}
-                        className="w-button quote-next"
-                      >
-                        <img src="/arrow-right.svg" loading="lazy" alt="" />
-                      </button>
-                    </>
-                  )}
-                </div>
               </div>
             ))}
           </div>
