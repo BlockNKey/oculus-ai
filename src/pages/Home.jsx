@@ -18,6 +18,7 @@ import Tires from "../components/Tiers";
 import StarField from "../components/StarField";
 import Tokenomics from "../components/Tokenomics";
 import { CircularCarousel } from "../components/CircularCarousel";
+import Ecosystem from "../components/Ecosystem/Ecosystem";
 
 const Home = () => {
   return (
@@ -78,13 +79,13 @@ const Home = () => {
         {
           sno: 2,
           name: "God's Eye",
-          desc: "It grants unparalleled control, allowing users to design, automate, and optimize bespoke trading strategies with deep-learning AI, advanced quant models, and real-time on-chain forensics. With God’s eye market surveillance, it cross-analyzes price action, whale activity, liquidity flows, and sentiment across all major exchanges, Layer 1s, Layer 2s, and DeFi ecosystems.",
+          desc: "It grants unparalleled control, allowing users to design, automate, and optimize bespoke trading strategies with deep-learning AI, advanced quant models, and real-time on-chain forensics. With God's eye market surveillance, it cross-analyzes price action, whale activity, liquidity flows, and sentiment across all major exchanges, Layer 1s, Layer 2s, and DeFi ecosystems.",
           img: "/pic2.jpg",
         },
         {
           sno: 2,
           name: "God's Eye",
-          desc: "Custom scripting, API-level integrations, and AI-enhanced alerts adapt to your unique trading style, providing a zero-latency edge in even the most volatile conditions. God's Eye isn’t just a tool—it’s an unstoppable force that sees everything, predicts faster, and executes smarter.",
+          desc: "Custom scripting, API-level integrations, and AI-enhanced alerts adapt to your unique trading style, providing a zero-latency edge in even the most volatile conditions. God's Eye isn't just a tool—it's an unstoppable force that sees everything, predicts faster, and executes smarter.",
           img: "/pic3.jpg",
         },
       ]} />
@@ -104,28 +105,20 @@ const Home = () => {
         {
           sno: 0,
           name: "Third Eye",
-          desc: "Third Eye isn’t just another market tracker—it’s a hyper-specialized intelligence engine built solely for pumpfun dynamics. While Glimpse, Aperture and God's Eye masters the broader market, The Third Eye focuses exclusively on detecting, tracking, and capitalizing on high-momentum pumpfun plays before they explode. Powered by AI-driven PnL tracking, liquidity-to-volume mapping, and social sentiment surges, Apex identifies coordinated accumulation patterns, influencer-driven hype, and pre-pump signals with precision.",
-          img: "/thirdeye.png",
+          desc: "Third Eye isn't just another market tracker—it's a hyper-specialized intelligence engine built solely for pumpfun dynamics. While Glimpse, Aperture and God's Eye masters the broader market, The Third Eye focuses exclusively on detecting, tracking, and capitalizing on high-momentum pumpfun plays before they explode. Powered by AI-driven PnL tracking, liquidity-to-volume mapping, and social sentiment surges, Apex identifies coordinated accumulation patterns, influencer-driven hype, and pre-pump signals with precision.",
+          img: "/pic1.jpg",
         },
         {
           sno: 0,
           name: "Third Eye",
-          desc: "Its adaptive automation lets you customize alerts, sniper entries, and strategic exits, ensuring you’re positioned ahead of the FOMO wave—not chasing it. With zero-latency execution and fully customizable strategy tools, Third Eye transforms chaos into opportunity, putting you in command of the fastest, most volatile moves in the market.",
-          video: "/teaser.mp4",
-        }
-      ]} />
-      <ProductCarousel content={[
-        {
-          sno: 1,
-          name: "Oculus AI",
-          desc: "Third Eye isn’t just another market tracker—it’s a hyper-specialized intelligence engine built solely for pumpfun dynamics. While Glimpse, Aperture and God's Eye masters the broader market, The Third Eye focuses exclusively on detecting, tracking, and capitalizing on high-momentum pumpfun plays before they explode. Powered by AI-driven PnL tracking, liquidity-to-volume mapping, and social sentiment surges, Apex identifies coordinated accumulation patterns, influencer-driven hype, and pre-pump signals with precision.",
-          img: "/mro2.png",
+          desc: "Its adaptive automation lets you customize alerts, sniper entries, and strategic exits, ensuring you're positioned ahead of the FOMO wave—not chasing it. With zero-latency execution and fully customizable strategy tools, Third Eye transforms chaos into opportunity, putting you in command of the fastest, most volatile moves in the market.",
+          img: "/pic2.jpg",
         },
         {
-          sno: 1,
-          name: "Oculus AI",
-          desc: "Its adaptive automation lets you customize alerts, sniper entries, and strategic exits, ensuring you’re positioned ahead of the FOMO wave—not chasing it. With zero-latency execution and fully customizable strategy tools, Third Eye transforms chaos into opportunity, putting you in command of the fastest, most volatile moves in the market.",
-          video: "/teaser.mp4",
+          sno: 0,
+          name: "Third Eye",
+          desc: "Its adaptive automation lets you customize alerts, sniper entries, and strategic exits, ensuring you're positioned ahead of the FOMO wave—not chasing it. With zero-latency execution and fully customizable strategy tools, Third Eye transforms chaos into opportunity, putting you in command of the fastest, most volatile moves in the market.",
+          img: "/pic3.jpg",
         }
       ]} />
       {/*<Aperture />*/}
@@ -182,6 +175,18 @@ const Home = () => {
       />
       {/* <Statistics />
       <Teaser /> */}
+      <Ecosystem
+        heading="Oculus AI"
+        bubbles={[
+          { image: "/chill.jpg", title: "Chill Monger", size: 80 },
+          { image: "/commander.jpg", title: "Commander", size: 80 },
+          { image: "/martin.jpg", title: "Martin", size: 70 },
+          { image: "/shinzo.jpg", title: "Shinzo", size: 70 },
+          { image: "/scott.jpg", title: "Scott", size: 90 },
+          { image: "/johnson.jpg", title: "Johnson", size: 75 },
+          // Add more bubbles as needed
+        ]}
+      />
       <Footer />
     </div>
   );

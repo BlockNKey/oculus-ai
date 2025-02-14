@@ -1,0 +1,102 @@
+.ecosystem-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ecosystem-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.ecosystem-wrapper {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #131317;
+  box-shadow: 0 0 30px white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecosystem-center {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #1EE9B9;
+  box-shadow: 0 0 10px #1EE9B9;
+  background-image: linear-gradient(to bottom, #1ee9ba7e, #1ee9ba1a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.center-logo {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #FE7EF1;
+  box-shadow: 0 0 10px #FE7EF1;
+  background-image: linear-gradient(to bottom, #fe7ef173, #fe7ef11c);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bubble::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.3;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.bubble:hover {
+  z-index: 10;
+}
+
+.bubble-image {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.bubble-title {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bubble:hover .bubble-title {
+  opacity: 1;
+}
